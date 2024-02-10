@@ -2,24 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package ui;
+package userInterface;
 
-import model.VitalSignsHistory;
+import business.AccountDirectory;
+import java.awt.CardLayout;
 
 /**
  *
- * @author josephchakola
+ * @author piyushkunjilwar
  */
 public class MainJFrame extends javax.swing.JFrame {
-    
-    private VitalSignsHistory vitals;
-
+    private AccountDirectory accountDirectory;
     /**
      * Creates new form MainJFrame
      */
     public MainJFrame() {
         initComponents();
-        vitals = new VitalSignsHistory();
+        this.accountDirectory = new AccountDirectory();
+        
     }
 
     /**
@@ -31,92 +31,75 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        JSplitPane = new javax.swing.JSplitPane();
-        controlPanel = new javax.swing.JPanel();
-        btnCreate = new javax.swing.JButton();
-        btnView = new javax.swing.JButton();
-        workArea = new javax.swing.JPanel();
+        jSplitPane1 = new javax.swing.JSplitPane();
+        topJPanel = new javax.swing.JPanel();
+        btnAccountmng = new javax.swing.JButton();
+        userProcessContainer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(449, 519));
 
-        btnCreate.setText("Create Vitals");
-        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+        jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+
+        topJPanel.setBackground(new java.awt.Color(255, 102, 0));
+        topJPanel.setForeground(new java.awt.Color(0, 153, 153));
+
+        btnAccountmng.setBackground(new java.awt.Color(102, 255, 102));
+        btnAccountmng.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnAccountmng.setForeground(new java.awt.Color(255, 255, 255));
+        btnAccountmng.setText("Account Manager");
+        btnAccountmng.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateActionPerformed(evt);
+                btnAccountmngActionPerformed(evt);
             }
         });
 
-        btnView.setText("View Vitals");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
-        controlPanel.setLayout(controlPanelLayout);
-        controlPanelLayout.setHorizontalGroup(
-            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout topJPanelLayout = new javax.swing.GroupLayout(topJPanel);
+        topJPanel.setLayout(topJPanelLayout);
+        topJPanelLayout.setHorizontalGroup(
+            topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topJPanelLayout.createSequentialGroup()
+                .addContainerGap(761, Short.MAX_VALUE)
+                .addComponent(btnAccountmng, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        topJPanelLayout.setVerticalGroup(
+            topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topJPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCreate)
-                    .addComponent(btnView))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnAccountmng, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCreate, btnView});
+        jSplitPane1.setTopComponent(topJPanel);
 
-        controlPanelLayout.setVerticalGroup(
-            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(btnCreate)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnView)
-                .addContainerGap(318, Short.MAX_VALUE))
-        );
-
-        JSplitPane.setLeftComponent(controlPanel);
-
-        javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
-        workArea.setLayout(workAreaLayout);
-        workAreaLayout.setHorizontalGroup(
-            workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
-        );
-        workAreaLayout.setVerticalGroup(
-            workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 452, Short.MAX_VALUE)
-        );
-
-        JSplitPane.setRightComponent(workArea);
+        userProcessContainer.setLayout(new java.awt.CardLayout());
+        jSplitPane1.setRightComponent(userProcessContainer);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE)
+            .addComponent(jSplitPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void btnAccountmngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccountmngActionPerformed
         // TODO add your handling code here:
-        ViewJPanel vp =new ViewJPanel(vitals);
-        JSplitPane.setRightComponent(vp);
-    }//GEN-LAST:event_btnViewActionPerformed
-
-    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
-        // TODO add your handling code here:
-        CreateJPanel create = new CreateJPanel(vitals);
-        JSplitPane.setRightComponent(create);
-    }//GEN-LAST:event_btnCreateActionPerformed
+        AccountManageWorkAreaJPanel panel = new AccountManageWorkAreaJPanel(userProcessContainer, accountDirectory);
+        userProcessContainer.add("ManageJPanel", panel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+   
+    }//GEN-LAST:event_btnAccountmngActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,10 +137,9 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JSplitPane JSplitPane;
-    private javax.swing.JButton btnCreate;
-    private javax.swing.JButton btnView;
-    private javax.swing.JPanel controlPanel;
-    private javax.swing.JPanel workArea;
+    private javax.swing.JButton btnAccountmng;
+    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JPanel topJPanel;
+    private javax.swing.JPanel userProcessContainer;
     // End of variables declaration//GEN-END:variables
 }

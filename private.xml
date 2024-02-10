@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/joseph/Documents/GitHub/chakola_joseph_002824177_labs/Lab_2/src/ui/MainJFrame.java</file>
-            <file>file:/Users/joseph/Documents/GitHub/chakola_joseph_002824177_labs/Lab_2/src/model/VitalSigns.java</file>
-            <file>file:/Users/joseph/Documents/GitHub/chakola_joseph_002824177_labs/Lab_2/src/model/VitalSignsHistory.java</file>
-            <file>file:/Users/joseph/Documents/GitHub/chakola_joseph_002824177_labs/Lab_2/src/ui/CreateJPanel.java</file>
-            <file>file:/Users/joseph/Documents/GitHub/chakola_joseph_002824177_labs/Lab_2/src/ui/ViewJPanel.java</file>
+            <file>file:/C:/Users/USER-PC/Documents/NetBeansProjects/LAB_3/src/userInterface/CreateAccountJPanel.java</file>
+            <file>file:/C:/Users/USER-PC/Documents/NetBeansProjects/LAB_3/src/userInterface/MainJFrame.java</file>
+            <file>file:/C:/Users/USER-PC/Documents/NetBeansProjects/LAB_3/src/userInterface/ManageAccJPanel.java</file>
+            <file>file:/C:/Users/USER-PC/Documents/NetBeansProjects/LAB_3/src/userInterface/ManageJPanel.java</file>
         </group>
     </open-files>
 </project-private>
