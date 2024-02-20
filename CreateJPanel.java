@@ -4,24 +4,24 @@
  */
 package ui;
 
-import javax.swing.JOptionPane;
-import model.VitalSigns;
-import model.VitalSignsHistory;
-
 /**
  *
- * @author josephchakola
+ * @author piyushkunjilwar
  */
-public class CreateJPanel extends javax.swing.JPanel {
-    
-    private VitalSignsHistory vitals;
+public class Createjpanel extends javax.swing.JPanel {
 
+    CreatejPanel createPanel = new CreateJPanel(product)
+        splitPane.setRightcomponent(createPanel);  
+    
     /**
-     * Creates new form createJPanel
+     * Creates new form Createjpanel
      */
-    public CreateJPanel(VitalSignsHistory vitals) {
+        Product product;
+        
+    public CreateJpanel(Produt product) {
         initComponents();
-        this.vitals = vitals;
+        this.product = Product;
+        
     }
 
     /**
@@ -33,57 +33,51 @@ public class CreateJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        mainLabel = new javax.swing.JLabel();
-        tempLabel = new javax.swing.JLabel();
-        bpLabel = new javax.swing.JLabel();
-        plLabel = new javax.swing.JLabel();
-        dtLabel = new javax.swing.JLabel();
-        tempField = new javax.swing.JTextField();
-        bpField = new javax.swing.JTextField();
-        plField = new javax.swing.JTextField();
-        dtField = new javax.swing.JTextField();
-        saveButton = new javax.swing.JButton();
+        iblTitle = new javax.swing.JLabel();
+        iblName = new javax.swing.JLabel();
+        ibldescr = new javax.swing.JLabel();
+        iblprice = new javax.swing.JLabel();
+        iblAvailNum = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        txtDescr = new javax.swing.JTextField();
+        txtPrice = new javax.swing.JTextField();
+        txtAvailNum = new javax.swing.JTextField();
+        btnSave = new javax.swing.JButton();
 
-        mainLabel.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        mainLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        mainLabel.setText("Create Vitals");
+        iblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        iblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        iblTitle.setText("Create Product");
 
-        tempLabel.setText("Temperature:");
+        iblName.setText("Name:");
 
-        bpLabel.setText("Blood Pressure:");
+        ibldescr.setText("Description:");
 
-        plLabel.setText("Pulse:");
+        iblprice.setText("Price:");
 
-        dtLabel.setText("Date:");
+        iblAvailNum.setText("Availability:");
 
-        tempField.addActionListener(new java.awt.event.ActionListener() {
+        txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tempFieldActionPerformed(evt);
+                txtNameActionPerformed(evt);
             }
         });
 
-        bpField.addActionListener(new java.awt.event.ActionListener() {
+        txtDescr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bpFieldActionPerformed(evt);
+                txtDescrActionPerformed(evt);
             }
         });
 
-        plField.addActionListener(new java.awt.event.ActionListener() {
+        txtAvailNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                plFieldActionPerformed(evt);
+                txtAvailNumActionPerformed(evt);
             }
         });
 
-        dtField.addActionListener(new java.awt.event.ActionListener() {
+        btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dtFieldActionPerformed(evt);
-            }
-        });
-
-        saveButton.setText("Save Vitals");
-        saveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveButtonActionPerformed(evt);
+                btnSaveActionPerformed(evt);
             }
         });
 
@@ -91,96 +85,90 @@ public class CreateJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(mainLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
+            .addComponent(iblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(88, 88, 88)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(dtLabel)
-                    .addComponent(plLabel)
-                    .addComponent(bpLabel)
-                    .addComponent(tempLabel))
-                .addGap(30, 30, 30)
+                    .addComponent(iblName)
+                    .addComponent(iblprice)
+                    .addComponent(iblAvailNum)
+                    .addComponent(ibldescr))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tempField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bpField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(plField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dtField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtName)
+                        .addComponent(txtDescr, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                        .addComponent(txtPrice)
+                        .addComponent(txtAvailNum)))
+                .addGap(35, 35, 35))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(mainLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tempLabel)
-                    .addComponent(tempField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bpLabel)
-                    .addComponent(bpField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(plLabel)
-                    .addComponent(plField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dtLabel)
-                    .addComponent(dtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
-                .addComponent(saveButton)
-                .addContainerGap(288, Short.MAX_VALUE))
+                .addComponent(iblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(iblName)
+                        .addGap(44, 44, 44))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtDescr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ibldescr))
+                        .addGap(12, 12, 12)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(iblprice))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtAvailNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(iblAvailNum))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(btnSave)
+                .addGap(25, 25, 25))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tempFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempFieldActionPerformed
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tempFieldActionPerformed
-
-    private void bpFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bpFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bpFieldActionPerformed
-
-    private void plFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_plFieldActionPerformed
-
-    private void dtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dtFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dtFieldActionPerformed
-
-    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
-        // TODO add your handling code here:
-        VitalSigns vs = new VitalSigns(
-                Double.parseDouble(tempField.getText()),
-                Double.parseDouble(bpField.getText()),
-                Integer.parseInt(plField.getText()),
-                dtField.getText()
-        );
-        vitals.addNewVital(vs);
-        JOptionPane.showMessageDialog(this, "New Vital Saved.");
-        tempField.setText("");
-        bpField.setText("");
-        plField.setText("");
-        dtField.setText("");
         
-    }//GEN-LAST:event_saveButtonActionPerformed
+        product.setName(txtName.getText());
+        product.setDescr(txtDescr.getText());
+        product.setAvailNum(txtAvailNum.getText());
+        product.setPrice(txtPrice.getText());
+        
+        
+        Joptionpane.showMessageDialog(this, "Product Information Saved);
+        
+    }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameActionPerformed
+
+    private void txtDescrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDescrActionPerformed
+
+    private void txtAvailNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAvailNumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAvailNumActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField bpField;
-    private javax.swing.JLabel bpLabel;
-    private javax.swing.JTextField dtField;
-    private javax.swing.JLabel dtLabel;
-    private javax.swing.JLabel mainLabel;
-    private javax.swing.JTextField plField;
-    private javax.swing.JLabel plLabel;
-    private javax.swing.JButton saveButton;
-    private javax.swing.JTextField tempField;
-    private javax.swing.JLabel tempLabel;
+    private javax.swing.JButton btnSave;
+    private javax.swing.JLabel iblAvailNum;
+    private javax.swing.JLabel iblName;
+    private javax.swing.JLabel iblTitle;
+    private javax.swing.JLabel ibldescr;
+    private javax.swing.JLabel iblprice;
+    private javax.swing.JTextField txtAvailNum;
+    private javax.swing.JTextField txtDescr;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtPrice;
     // End of variables declaration//GEN-END:variables
 }
