@@ -6,7 +6,7 @@ package model;
 
 /**
  *
- * @author gsst
+ * @piyush
  */
 public class Business {
     
